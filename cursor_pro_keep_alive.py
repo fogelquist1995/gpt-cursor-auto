@@ -156,8 +156,8 @@ def delete_account(browser, tab):
 
     handle_turnstile(tab)
     time.sleep(random.uniform(1,3))
-    tab.get_screenshot('sign-in_success.png')
-    print("登录账户截图")
+    # tab.get_screenshot('sign-in_success.png')
+    # print("登录账户截图")
     
     tab.get('https://www.cursor.com/settings')
     print("进入设置页面")
@@ -192,8 +192,8 @@ def delete_account(browser, tab):
             print("点击Delete")
             delete_button.click()
             time.sleep(5)
-            tab.get_screenshot('delete_account.png')
-            print("删除账户截图")
+            # tab.get_screenshot('delete_account.png')
+            # print("删除账户截图")
             return True
     except Exception as e:  
         print(f"点击Delete失败: {str(e)}")
@@ -275,8 +275,8 @@ def sign_up_account(browser, tab):
     handle_turnstile(tab)
     
     time.sleep(random.uniform(1,3))
-    tab.get_screenshot("sign_up_success.png")
-    print("注册账户截图")
+    # tab.get_screenshot("sign_up_success.png")
+    # print("注册账户截图")
     print("注册完成")
     print("Cursor 账号： " + account)
     print("       密码： " + password)
